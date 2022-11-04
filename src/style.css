@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+      font-family:'Josefin Sans', sans-serif;
+      @apply text-text-primary z-10;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+
+.button-secondary{
+    @apply border-solid border-2 border-primary  rounded-lg align-middle text-primary hover:bg-primary hover:text-white;
+}
+
+.button-primary {
+    @apply border-solid border-2 border-primary  rounded-lg align-middle hover:bg-transparent hover:text-primary bg-primary text-white;
+}
+
+.button-shadow{
+box-shadow: 0px 3px 11px 2px rgba(0, 98, 65, 0.61);
+}
+
+.header-text{
+    @apply text-8xl font-bold;
+    background: linear-gradient(180deg, #006241 0%, #003E29 78.65%, #011811 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#home::before{
+    content: "";
+    background-image: url("./assets/images/bg-home.png");
+    /* mix-blend-mode: normal; */
+    background-size: cover;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0.03;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
